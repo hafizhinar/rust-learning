@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "module-01-foundations",
+]
+resolver = "2"
