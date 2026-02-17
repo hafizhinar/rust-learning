@@ -143,12 +143,12 @@ fix(module-02): fix borrow checker error in transaction log
 ## Module 01 — Language Foundations
 > *Estimasi: 2–3 minggu*
 
-- [ ] **01.01 — Setup Environment**
-  - [ ] Install Rust via rustup
-  - [ ] Cargo (build, run, test)
-  - [ ] rustfmt — code formatter
-  - [ ] clippy — linter
-  - [ ] rust-analyzer — IDE support
+- [X] **01.01 — Setup Environment**
+  - [X] Install Rust via rustup
+  - [X] Cargo (build, run, test)
+  - [X] rustfmt — code formatter
+  - [X] clippy — linter
+  - [X] rust-analyzer — IDE support
 
 - [ ] **01.02 — Macros Dasar & Output**
   - [ ] Apa itu macro & kenapa ada tanda `!`
