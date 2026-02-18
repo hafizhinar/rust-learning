@@ -150,13 +150,13 @@ fix(module-02): fix borrow checker error in transaction log
   - [X] clippy — linter
   - [X] rust-analyzer — IDE support
 
-- [ ] **01.02 — Macros Dasar & Output**
-  - [ ] Apa itu macro & kenapa ada tanda `!`
-  - [ ] `println!`, `print!`, `eprintln!`
-  - [ ] Format specifiers: `{}`, `{:?}`, `{:#?}`, `{:.2}`, `{:>10}`
-  - [ ] `format!` — return String tanpa print
-  - [ ] Macro sehari-hari: `vec!`, `panic!`, `assert!`
-  - [ ] Bedanya macro vs function
+- [X] **01.02 — Macros Dasar & Output**
+  - [X] Apa itu macro & kenapa ada tanda `!`
+  - [X] `println!`, `print!`, `eprintln!`
+  - [X] Format specifiers: `{}`, `{:?}`, `{:#?}`, `{:.2}`, `{:>10}`
+  - [X] `format!` — return String tanpa print
+  - [X] Macro sehari-hari: `vec!`, `panic!`, `assert!`
+  - [X] Bedanya macro vs function
 
 - [ ] **01.03 — Variables & Mutability**
   - [ ] `let` vs `let mut`

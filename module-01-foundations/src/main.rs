@@ -48,7 +48,7 @@ fn main() {
     //5. Format Debug {:?} - Developer Readable
     println!();
     println!("5. Format Debug - Developer Readable");
-    let numbers = vec![1,2,3,4,5];
+    let numbers = vec![1, 2, 3, 4, 5];
     let tuple = (10, "hello", true);
 
     //{} tidak bisa menggunakan tupple
@@ -64,7 +64,8 @@ fn main() {
     //7. Format Angka
     println!();
     println!("7. Format Angka");
-    let pi = 3.14159265;
+    // let pi = 3.14159265;
+    let pi = std::f64::consts::PI;
     let amount = 150000.0;
     let percent = 0.875;
 
@@ -112,6 +113,60 @@ fn main() {
     println!("Tanpa menggunakan macro: {:?}", v1);
 
     //Dengan macro lebih simple
-    let v2 = vec![1,2,3];
+    let v2 = vec![1, 2, 3];
     println!("Menggunakan macro: {:?}", v2);
+
+    //9. Panic
+    println!();
+    println!("9. Panic");
+
+    let balance = -100;
+    if balance < 0 {
+        // panic!{"Balance tidak boleh negatif: {}", balance};
+        println!{"Balance tidak boleh negatif: {}", balance};
+    }
+
+    println!("Balance: {}", balance);
+
+    println!();
+    println!("EXERCISE");
+    println!();
+    println!("1. Exercise - Print Name");
+    let age = 40;
+    let occupation = "CEO";
+    let message_user = format!("Name: {name} | Age: {age} | Occupation: {occupation}");
+
+    println!("{}", message_user);
+    println!();
+    println!("2. Exercise - Amount decimal");
+    let amount_decimal = 1750500.75;
+    println!("{:.2}", amount_decimal);
+    println!("{:.2}", percent);
+    println!("{:>15}", amount_decimal);
+    println!();
+    println!("3. Exercise - Vector with 5 transaction amount");
+    let trx_amount = vec![1_000_000, 1_500_000, 2_000_000, 2_500_000, 3_000_000];
+    println!("using println one line: {:?}", trx_amount);
+    println!("using println multi line: {:#?}", trx_amount);
+
+    eprintln!("using eprintln one line: {:?}", trx_amount);
+    eprintln!("using println multi line: {:#?}", trx_amount);
+    println!();
+    println!("4. Exercise - Format message for transaction");
+    let message_transaction = format!("Transaksi {} sebesar Rp {} berhasil diproses", "TRX001-31090938", 300_000_000);
+    println!("{}", message_transaction);
+}
+
+fn tambah(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_tambah() {
+        assert_eq!(tambah(3, 5), 8);
+    }
 }
