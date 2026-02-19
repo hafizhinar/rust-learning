@@ -155,6 +155,23 @@ fn main() {
     println!("4. Exercise - Format message for transaction");
     let message_transaction = format!("Transaksi {} sebesar Rp {} berhasil diproses", "TRX001-31090938", 300_000_000);
     println!("{}", message_transaction);
+
+    //modules 01.03
+    println!();
+    // Variables & Mutability
+    println!("Modules 01.03 - Variables & Mutability");
+    println!();
+    // 1.  Immutable Variable
+    println!("1. let - Immutable Variable");
+    let x = 5;
+    println!("x = {}", x); // return 5
+
+    //x = 10; // error karena immutables
+    // println!("x = {}", x);
+    //Example yang bener
+    let mut x = 10;
+    println!("x = {}", x);
+
 }
 
 fn tambah(a: i32, b: i32) -> i32 {
