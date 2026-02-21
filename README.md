@@ -1,17 +1,14 @@
-# rust-learning
-Rust learning journey from Go language
+# 🦀 Rust Learning
+Structured workspace for Rust programming — from fundamentals to backend systems.
 
-# 🦀 Rust Complete Curriculum
+## 🎯 Learning Goals
+- Backend development dengan fokus payment systems
+- Concurrent programming dan database integration
+- Error handling dan testing patterns
 
-> **Goal:** Go → Rust | Backend, Payment System, Systems Programming  
-> **Pace:** < 5 jam/minggu | **Estimasi:** ~9–10 Bulan  
-> **Pendekatan:** Konsep → Analogi Go → Implementasi → Pitfalls → Latihan
-
----
-
-## Introduction
-
-Repo ini adalah workspace untuk belajar Rust secara terstruktur dari nol hingga production-ready. Setiap modul adalah crate tersendiri yang bisa di-run dan di-test secara independen.
+## 📋 Curriculum Structure
+> **Pace:** < 5 jam/minggu | **Duration:** ~9–10 bulan  
+> **Approach:** Concept-first → Hands-on → Real-world patterns
 
 ### Struktur Repo
 
@@ -159,9 +156,9 @@ fix(module-02): fix borrow checker error in transaction log
   - [X] Bedanya macro vs function
 
 - [ ] **01.03 — Variables & Mutability**
-  - [ ] `let` vs `let mut`
-  - [ ] Immutable by default (vs Go)
-  - [ ] Shadowing
+  - [X] `let` vs `let mut`
+  - [X] Immutable by default (vs Go)
+  - [X] Shadowing
   - [ ] `const` & `static`
 
 - [ ] **01.04 — Data Types**
@@ -956,5 +953,7 @@ fix(module-02): fix borrow checker error in transaction log
 | Bulan 9 | Module 17 + 18 |
 
 ---
+
+**Status:** ✅ Selesai · 🔄 Sedang dikerjakan · ⬜ Belum dimulai
 
 *Checklist ini bisa di-update setiap kali menyelesaikan topik. Ubah `- [ ]` menjadi `- [x]` untuk menandai progress.*
