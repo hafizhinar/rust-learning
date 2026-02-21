@@ -161,7 +161,7 @@ fn main() {
     // Variables & Mutability
     println!("Modules 01.03 - Variables & Mutability");
     println!();
-    // 1.  Immutable Variable
+    // 1.  Immutable Variable - using let
     println!("1. let - Immutable Variable");
     let x = 5;
     println!("x = {}", x); // return 5
@@ -171,6 +171,108 @@ fn main() {
     //Example yang bener
     let mut x = 10;
     println!("x = {}", x);
+    println!();
+    //2.  Mutable Variable - using let mut
+    println!("2. let mut - Mutable Variable");
+    let mut x = 5;
+    println!("x awal = {}", x);
+
+    x = 10;
+    println!("x sekarang = {}",x);
+
+    x = x + 5;
+    println!("x akhir = {}", x);
+
+    println!();
+    println!("2.1. Contoh Use Case Real");
+    //Immutable - nilai tidak berubah
+    let rate = 0.15;
+    let base_amount = 1000;
+
+    //Mutable - nilai berubah dalam loop
+    let mut total = 0;
+    let mut count = 0;
+
+    for _ in 0..5 {
+        total += base_amount;
+        count += 1;
+    }
+
+    println!("Total: {}, count: {}", total, count);
+
+    println!();
+    println!("2.2. Analogi Payment System");
+    process_transaction(5000.0);
+
+    println!();
+    println!("2.3. Type Inference vs Explicit Type");
+    let x = 5;
+
+    let y:i32 = 10;
+    let z:f64 = std::f64::consts::PI; //3.14
+
+    let name: &str = "Joni";
+
+    let parsed: i32 = "42".parse().expect("Not a number");
+    println!("Inference: {}, Explicit: {}, {}, {}, {}", x, y, z, name, parsed);
+    println!();
+    println!("2.4. Shadowing Re-Declare Variable");
+    let x= 5;
+    println!("x pertama: {}", x);
+
+    let x = x + 1; // shadowing bukan mutate
+    println!("x kedua: {}", x);
+
+    let x = x * 2; //shadowing lagi
+    println!("x ketiga: {}", x);
+
+    println!();
+    println!("2.5. Shadowing vs Mutation");
+    println!("2.5.1. Shadowing vs Mutation");
+    //Shadowing - create new variable, tipe bisa berbeda
+    let x = "5"; // x adalah &str
+    let x = x.parse::<i32>().unwrap(); //x sekarang berubah menjadi i32
+    let x = x * 2; // x sekarang 10
+    println!("x: {}", x); //10
+
+    println!();
+    println!("2.5.2. Mutation - harus tipe sama");
+    // Mutation - harus tipe sama
+    let mut y:i32 = 5; // y adalah i32
+    y = 10; // Masih i32
+    //y = "10" //Error tidak dapate mengganti tipe
+    println!("y adalah mutation tipe harus sama: {}", y);
+
+    println!();
+    println!("2.6. Shadowing untuk transform data");
+    let input = " 150000 "; // string dengan whitespace
+
+    let input = input.trim(); // shadow: menghilangkan whitespace
+    let input = input.parse::<i32>().unwrap(); // shadow parse menjadi i32 atau integer
+    let input = input * 2;
+
+    println!("Result: {}", input);
+
+
+
+
+
+
+
+}
+
+fn process_transaction(amount: f64) {
+    //Immutable - transaction ID tidak boleh berubah
+    let transaction_id = "TRX-001";
+
+    //Mutable - balance berubah setelah transaksi
+    let mut balance = 10000.0;
+
+    balance -= amount;
+
+    //transaction_id = "TRX-002"; // Error
+
+    println!("Transaction: {}, New Balance: {}", transaction_id, balance);
 
 }
 
