@@ -1,3 +1,11 @@
+//const HARUS explicit type & uppercase naming convetion
+const MAX_TRANSACTIONS: u32 = 100_000;
+const PI: f64 = 3.14159;
+const APP_NAME: &str = "PaymentGateway";
+
+const MAX: u32 = 100;
+
+
 fn main() {
     // modules 01.01
     println!("Modules 01.01 - Basic Rust");
@@ -253,12 +261,33 @@ fn main() {
 
     println!("Result: {}", input);
 
+    println!();
+    //3. const - Compile Time Constant
+    println!("3. const - Compile Time Constant");
+    println!("MAX: {}", MAX_TRANSACTIONS);
+    println!("APP: {}", APP_NAME);
+    //const tidak bisa mutable
+    // const mut X: i32 = 5;
+    // const vs let
+    let max = 100;
+
+    //const tidak bisa function call
+    // const NOW: u64 = get_timestamp();
+
+    let now = get_timestamp();
+    println!("Get Timestamp: {}", now)
 
 
 
 
 
 
+
+
+}
+
+fn get_timestamp() -> u64 {
+    1234567890
 }
 
 fn process_transaction(amount: f64) {
